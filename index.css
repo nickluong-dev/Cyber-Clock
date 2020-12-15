@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+
+html {
+  /* background: url(./leyy-71SHXwBLp5w-unsplash.jpg);
+  background-size: cover; */
+  font-family: 'Libre Barcode 128 Text', cursive;  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid #D42450;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 5px 40px 5px #D42450;
+  transition: all 0.05s;
+}
+
+.pulse{
+  box-shadow: 0 0 50px 30px #D42450;
+  
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: #c6e4e4;
+  position: absolute;
+  top: 50%;
+  transform-origin: 99%;
+  transform: rotate(90deg);
+  transition:all 0.1s;
+  border-radius: 5px;
+  box-shadow: 0 0 13px #c6e4e4;
+  transition-timing-function: cubic-bezier(0.1, 2.03, 0, 1.84);
+}
+
+.second-hand{
+  height: 4px;
+  opacity: 60%;
+}
+
+.digital{
+  color: #D42450;
+  font-size: 500%;
+  position:relative;
+  top: -180%;
+  text-shadow: 0px 0px 20px #D42450;
+}
+
+#myVideo {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  z-index: -1;
+}
+
